@@ -45,14 +45,17 @@ public class AuditeurCNAM {
      *         homonymes...
      */
     public String login() {
-        int nl = 6;
-        int pl = 1;
-        if(nom.length()<6) nl = nom.length();
-        if(prenom.length()<1) pl = prenom.length();
-        String s = nom.substring(0,nl) + "_" + prenom.substring(0,pl);
-        return s.toLowerCase().replaceAll("/w/ig", "_");
-        // à compléter
+         if(nom. length()>6){return nom. substring(0,6). toLowerCase(). replaceAll("-",  "_"). replaceAll(" ",  "_"). replaceAll("\"",  "_"). replaceAll("\'",  "_"). replaceAll("é","e"). replaceAll("è","e" )+"_"+
+
+ prenom. substring(0,1). toLowerCase(). replaceAll("-",  "_"). replaceAll("é","e"). replaceAll("è","e"). replaceAll("\"",  "_"). replaceAll("\'", "_");}
+
+        else{return nom. toLowerCase(). replaceAll("-",  "_"). replaceAll(" ",  "_"). replaceAll("é","e"). replaceAll("è","e"). replaceAll("\"",  "_"). replaceAll("\'", "_")+"_"+
+
+ prenom. substring(0,1). toLowerCase(). replaceAll("-",  "_"). replaceAll("é","e"). replaceAll("è","e"). replaceAll("\"",  "_"). replaceAll("\'",  "_");}  // to be completed
+
+       
     }
+
 
     /**
      * Lecture du nom de l'auditeur.

@@ -93,7 +93,7 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
         assertEquals("Mr le Thon albacore ", "le Thon", auditeur1.nom());
         assertEquals("Mr le Thon albacore ", "alban", auditeur1.prenom());
         assertEquals(" matricule ?", "12345", auditeur1.matricule());
-        assertEquals(" login ? ", "le tho_a", auditeur1.login());
+        assertEquals(" login ? ", "le_tho_a", auditeur1.login());
     }
 
     public void test_nom_compose() {
@@ -101,7 +101,7 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
                 "Ton-Ton", "max", "12345");
         assertEquals("Mr Ton-Ton max ", "Ton-Ton", auditeur1.nom());
         assertEquals("Mr Ton-Ton max ", "max", auditeur1.prenom());
-        assertEquals("Mr Ton-Ton max ", "ton-to_m", auditeur1.login());
+        assertEquals("Mr Ton-Ton max ", "ton_to_m", auditeur1.login());
     }
 
     public void test_nom_court_avec_particule() {
@@ -110,7 +110,7 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
                 "max", "12345");
         assertEquals("Mr Te-Te max ", "Te-Te", auditeur1.nom());
         assertEquals("Mr Te-Te max ", "max", auditeur1.prenom());
-        assertEquals("nom court avec particules ? ", "te-te_m",
+        assertEquals("nom court avec particules ? ", "te_te_m",
             auditeur1.login());
     }
 
@@ -119,7 +119,7 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
                 "chloé", "12345");
         assertEquals("Mme Chloé chloé ", "Chloé", auditeur1.nom());
         assertEquals("Mme Chloé chloé ", "chloé", auditeur1.prenom());
-        assertEquals(" nom avec accent (é devient e) ? ", "chloé_c",
+        assertEquals(" nom avec accent (é devient e) ? ", "chloe_c",
             auditeur1.login());
     }
 
